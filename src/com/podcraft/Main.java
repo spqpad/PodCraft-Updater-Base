@@ -48,7 +48,7 @@ public class Main {
 
 
         System.out.println("Syncing newest.json...");
-        newestJson = getHTML("http://app.scriptvegas.com/podcraft/newest.json");
+        newestJson = getHTML(API.NEWEST_URI);
         System.out.println("Reading newest.json...");
         newest = decodeJson(newestJson);
         System.out.println("newest = " + newest);
@@ -70,7 +70,7 @@ public class Main {
     private static void update() {
         try {
             System.out.println("Downloading new version...");
-            URL website = new URL("http://app.scriptvegas.com/podcraft/PodCraft.jar");
+            URL website = new URL(API.JAR_URI);
             ReadableByteChannel rbc = Channels.newChannel(website.openStream());
             FileOutputStream fos = new FileOutputStream("PodCraft.jar");
             fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
