@@ -35,13 +35,12 @@ public class Main {
 
     public static void main(String args[])
     {
-        System.out.println("Reading current.json...");
         try {
             StringBuilder jsonBuilder = new StringBuilder();
             Files.lines(new File("current.json").toPath())
                     .forEach( jsonBuilder::append );
             current = decodeJson(jsonBuilder.toString());
-            System.out.println("current = " + current);
+//            System.out.println("current = " + current);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -49,18 +48,16 @@ public class Main {
 
         System.out.println("Syncing newest.json...");
         newestJson = getHTML(API.NEWEST_URI);
-        System.out.println("Reading newest.json...");
         newest = decodeJson(newestJson);
-        System.out.println("newest = " + newest);
+//        System.out.println("newest = " + newest);
 
         if (newest.code > current.code) {
-            System.out.println("Time to update");
+            System.out.println("Time to update to " + newest.name + ", current is " + current.name);
             update();
-
             updateCurrentJsonFile();
-
+            //launchLauncher();
         } else {
-            System.out.println("Everything is up-to-date. Quitting.");
+            System.out.println("Launcher is up-to-date with version " + current.name);
             System.exit(0);
         }
 
@@ -129,6 +126,32 @@ public class Main {
             e.printStackTrace();
         }
         return result.toString();
+    }
+
+    private static void launchLauncher() {
+        Process proc;
+        String command = ".\\launch-no-update.bat";
+        try  {
+            System.out.println("Starting up new launcher");
+            proc = Runtime.getRuntime().exec(command);
+//            System.exit(0);
+            InputStream in = proc.getInputStream();
+            InputStream err = proc.getErrorStream();
+            BufferedReader inputStream = new BufferedReader(new InputStreamReader(in));
+            String s;
+            while((s = inputStream.readLine()) != null)
+            {
+                System.out.println(s);
+            }
+            BufferedReader errStream = new BufferedReader(new InputStreamReader(err));
+            String s2;
+            while((s2 = errStream.readLine()) != null)
+            {
+                System.err.println(s2);
+            }
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
     }
 
 }

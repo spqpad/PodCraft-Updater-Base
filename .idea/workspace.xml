@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5226eafd-0f6f-4e51-95b0-8aba0331877c" name="Default" comment="Initial commit. Fetches new version, downloads jar if newer available, saves new version if updated">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/podcraft/API.java" />
-      <change type="DELETED" beforePath="D:\Projects\PodCraft-Updater-Base\newest.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PodCraft-Updater-Base/com/podcraft/Main$Version.class" afterPath="$PROJECT_DIR$/out/production/PodCraft-Updater-Base/com/podcraft/Main$Version.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PodCraft-Updater-Base/com/podcraft/Main.class" afterPath="$PROJECT_DIR$/out/production/PodCraft-Updater-Base/com/podcraft/Main.class" />
+    <list default="true" id="5226eafd-0f6f-4e51-95b0-8aba0331877c" name="Default" comment="Seperate URI references into own class">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/PodCraft_Updater_Base_jar/PodCraft-Updater-Base.jar" afterPath="$PROJECT_DIR$/out/artifacts/PodCraft_Updater_Base_jar/PodCraft-Updater-Base.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/podcraft/Main.java" afterPath="$PROJECT_DIR$/src/com/podcraft/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/current.json" afterPath="$PROJECT_DIR$/current.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PodCraft-Updater-Base.iws" />
@@ -33,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/podcraft/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.5135135">
+              <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#600#601#0" expanded="true" />
@@ -71,17 +66,17 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+              <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Files.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Files.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_40/src.zip!/java/nio/file/Files.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2857143">
-              <caret line="89" column="19" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="106" column="26" selection-start-line="106" selection-start-column="26" selection-end-line="106" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -100,6 +95,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Szabolcs Pasztor &lt;spqpad@gmail.com&gt;" />
         <option value="Szabolcs Pásztor" />
       </list>
     </option>
@@ -117,8 +113,8 @@
         <option value="$PROJECT_DIR$/out/artifacts/PodCraft_Updater_Base_jar/current.json" />
         <option value="$PROJECT_DIR$/newest.json" />
         <option value="$PROJECT_DIR$/current.json" />
-        <option value="$PROJECT_DIR$/src/com/podcraft/Main.java" />
         <option value="$PROJECT_DIR$/src/com/podcraft/API.java" />
+        <option value="$PROJECT_DIR$/src/com/podcraft/Main.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -519,7 +515,7 @@
       <created>1438519131662</created>
       <option name="number" value="Default" />
       <updated>1438519131662</updated>
-      <workItem from="1438519134167" duration="5518000" />
+      <workItem from="1438519134167" duration="7568000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit. Fetches new version, downloads jar if newer available, saves new version if updated">
       <created>1438524565389</created>
@@ -527,11 +523,23 @@
       <option name="project" value="LOCAL" />
       <updated>1438524565389</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Seperate URI references into own class">
+      <created>1438524898357</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1438524898357</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Functionally updates and launches the app, little improvements">
+      <created>1438526988078</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1438526988078</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5518000" />
+    <option name="totallyTimeSpent" value="7568000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -544,7 +552,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -553,11 +561,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32900432" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.119936034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15778251" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -586,7 +594,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Initial commit. Fetches new version, downloads jar if newer available, saves new version if updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit. Fetches new version, downloads jar if newer available, saves new version if updated" />
+    <MESSAGE value="Seperate URI references into own class" />
+    <MESSAGE value="Functionally updates and launches the app, little improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Functionally updates and launches the app, little improvements" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -614,18 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/podcraft/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/podcraft/API.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.7777778">
@@ -634,19 +632,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_40/src.zip!/java/nio/file/Files.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <caret line="106" column="26" selection-start-line="106" selection-start-column="26" selection-end-line="106" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_40/src.zip!/java/nio/file/Files.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2857143">
-          <caret line="89" column="19" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/podcraft/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5135135">
+          <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
