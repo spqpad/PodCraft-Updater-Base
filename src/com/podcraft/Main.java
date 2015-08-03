@@ -52,12 +52,12 @@ public class Main {
 //        System.out.println("newest = " + newest);
 
         if (newest.code > current.code) {
-            System.out.println("Time to update to " + newest.name + ", current is " + current.name);
+            System.out.println("Time to update to " + newest.name + " (build " + newest.code + "), current is " + current.name + "(build " + current.code + ")");
             update();
             updateCurrentJsonFile();
             //launchLauncher();
         } else {
-            System.out.println("Launcher is up-to-date with version " + current.name);
+            System.out.println("Launcher is up-to-date with version " + current.name + " (build " + current.code + ")");
             System.exit(0);
         }
 
@@ -121,8 +121,6 @@ public class Main {
             }
             rd.close();
         } catch (IOException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
             e.printStackTrace();
         }
         return result.toString();
