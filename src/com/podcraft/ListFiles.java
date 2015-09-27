@@ -4,7 +4,6 @@ import edu.princeton.cs.algs4.Stopwatch;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
@@ -60,8 +59,6 @@ public class ListFiles {
                     System.out.println("" + file.getPath() + " " + md5);
                 }
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

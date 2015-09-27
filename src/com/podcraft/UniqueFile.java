@@ -20,4 +20,16 @@ public class UniqueFile {
             return (this.qualifiedName.equals(other.qualifiedName) && this.md5.equals(other.md5));
         } else return false;
     }
+
+    @Override
+    public int hashCode() {
+        int result = qualifiedName.hashCode();
+        result = 31 * result + md5.hashCode();
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "UniqueFile("+this.qualifiedName+", "+this.md5+") ";
+    }
 }
