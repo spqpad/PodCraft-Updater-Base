@@ -23,6 +23,7 @@ public class UniqueFile {
 
     @Override
     public int hashCode() {
+
         int result = qualifiedName.hashCode();
         result = 31 * result + md5.hashCode();
         return result;
@@ -31,5 +32,13 @@ public class UniqueFile {
     @Override
     public String toString() {
         return "UniqueFile("+this.qualifiedName+", "+this.md5+") ";
+    }
+
+    public String getQualifiedName() {
+        return qualifiedName;
+    }
+
+    public String getMd5() {
+        return md5;
     }
 }

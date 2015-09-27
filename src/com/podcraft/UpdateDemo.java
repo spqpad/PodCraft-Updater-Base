@@ -1,6 +1,10 @@
 package com.podcraft;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -45,6 +49,22 @@ public class UpdateDemo {
         filesToRemove.removeAll(serverFiles);
         System.out.println("To remove:");
         print(filesToRemove);
+
+//        FileSystems.getDefault().getPath()
+
+        filesToRemove.stream().forEach(
+                (x) -> {
+                    Path path = FileSystems.getDefault().getPath(x.getQualifiedName());
+                    try {
+                        Files.delete(path);
+                        System.out.println("removed " + x.getQualifiedName());
+                    } catch (IOException e) {
+                        System.out.println(e.getMessage());
+                        e.printStackTrace();
+                    }
+                }
+        );
+
 
     }
 

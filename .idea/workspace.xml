@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5226eafd-0f6f-4e51-95b0-8aba0331877c" name="Default" comment="Add demo that lists the two sets of files and selects the ones to be deleted and downloaded">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/podcraft/ContentsSet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/PodCraft_Updater_Base_jar/PodCraft-Updater-Base.jar" afterPath="$PROJECT_DIR$/out/artifacts/PodCraft_Updater_Base_jar/PodCraft-Updater-Base.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/podcraft/ListFiles.java" afterPath="$PROJECT_DIR$/src/com/podcraft/ListFiles.java" />
+    <list default="true" id="5226eafd-0f6f-4e51-95b0-8aba0331877c" name="Default" comment="Add JSON reading method for ContentsSet">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/podcraft/UniqueFile.java" afterPath="$PROJECT_DIR$/src/com/podcraft/UniqueFile.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/podcraft/UpdateDemo.java" afterPath="$PROJECT_DIR$/src/com/podcraft/UpdateDemo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -45,9 +43,9 @@
         <entry file="file://$PROJECT_DIR$/src/com/podcraft/ListFiles.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1443382648208" expanded="true" signature="30:145" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -69,10 +67,13 @@
         <entry file="file://$PROJECT_DIR$/src/com/podcraft/UniqueFile.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+              <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
               <folding>
-                <element signature="e#783#784#0" expanded="true" />
-                <element signature="e#857#858#0" expanded="true" />
+                <element signature="e#784#785#0" expanded="true" />
+                <element signature="e#858#859#0" expanded="true" />
+                <element signature="e#898#899#0" expanded="true" />
+                <element signature="e#934#935#0" expanded="true" />
+                <element signature="e#990#991#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -101,8 +102,8 @@
       <file leaf-file-name="UpdateDemo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/podcraft/UpdateDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5772266">
-              <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+            <state vertical-scroll-proportion="4.830986">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -155,10 +156,10 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/com/podcraft/Main.java" />
         <option value="$PROJECT_DIR$/src/com/podcraft/DirectoryChecksum.java" />
-        <option value="$PROJECT_DIR$/src/com/podcraft/UniqueFile.java" />
         <option value="$PROJECT_DIR$/src/com/podcraft/ListFiles.java" />
         <option value="$PROJECT_DIR$/src/com/podcraft/Contents.java" />
         <option value="$PROJECT_DIR$/src/com/podcraft/ContentsSet.java" />
+        <option value="$PROJECT_DIR$/src/com/podcraft/UniqueFile.java" />
         <option value="$PROJECT_DIR$/src/com/podcraft/UpdateDemo.java" />
       </list>
     </option>
@@ -669,7 +670,7 @@
       <workItem from="1442847218917" duration="16000" />
       <workItem from="1443351452350" duration="3336000" />
       <workItem from="1443369305644" duration="9547000" />
-      <workItem from="1443380745874" duration="1549000" />
+      <workItem from="1443380745874" duration="2148000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit. Fetches new version, downloads jar if newer available, saves new version if updated">
       <created>1438524565389</created>
@@ -749,11 +750,17 @@
       <option name="project" value="LOCAL" />
       <updated>1443380105182</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add JSON reading method for ContentsSet">
+      <created>1443382652411</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1443382652411</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35154000" />
+    <option name="totallyTimeSpent" value="35753000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -766,7 +773,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1184" height="1047" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -776,7 +783,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32786885" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.89180326" sideWeight="0.49706623" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.89180326" sideWeight="0.49706623" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32786885" sideWeight="0.49706623" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26512456" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -818,7 +825,8 @@
     <MESSAGE value="Add UniqueFile class to differentiate files" />
     <MESSAGE value="Add listContents method that creates a Set of a folders contents with MD5 sums" />
     <MESSAGE value="Add demo that lists the two sets of files and selects the ones to be deleted and downloaded" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add demo that lists the two sets of files and selects the ones to be deleted and downloaded" />
+    <MESSAGE value="Add JSON reading method for ContentsSet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add JSON reading method for ContentsSet" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1207,7 +1215,7 @@
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1220,23 +1228,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/podcraft/UniqueFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-          <folding>
-            <element signature="e#783#784#0" expanded="true" />
-            <element signature="e#857#858#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/podcraft/ListFiles.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1443382648208" expanded="true" signature="30:145" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1261,10 +1258,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/podcraft/UniqueFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+          <folding>
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#858#859#0" expanded="true" />
+            <element signature="e#898#899#0" expanded="true" />
+            <element signature="e#934#935#0" expanded="true" />
+            <element signature="e#990#991#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/podcraft/UpdateDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5772266">
-          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+        <state vertical-scroll-proportion="4.830986">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
