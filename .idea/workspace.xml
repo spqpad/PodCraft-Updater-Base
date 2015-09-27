@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5226eafd-0f6f-4e51-95b0-8aba0331877c" name="Default" comment="Add test program that lists all files in a directory recursively with MD5 sums">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/podcraft/UniqueFile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/podcraft/UpdateDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/PodCraft_Updater_Base_jar/PodCraft-Updater-Base.jar" afterPath="$PROJECT_DIR$/out/artifacts/PodCraft_Updater_Base_jar/PodCraft-Updater-Base.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/podcraft/ListFiles.java" afterPath="$PROJECT_DIR$/src/com/podcraft/ListFiles.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -41,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListFiles.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ListFiles.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/podcraft/ListFiles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.45095828">
+              <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UniqueFile.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UniqueFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/podcraft/UniqueFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37880495">
+            <state vertical-scroll-proportion="0.0">
               <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding />
             </state>
@@ -67,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -138,8 +135,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/com/podcraft/Main.java" />
         <option value="$PROJECT_DIR$/src/com/podcraft/DirectoryChecksum.java" />
-        <option value="$PROJECT_DIR$/src/com/podcraft/ListFiles.java" />
         <option value="$PROJECT_DIR$/src/com/podcraft/UniqueFile.java" />
+        <option value="$PROJECT_DIR$/src/com/podcraft/ListFiles.java" />
       </list>
     </option>
   </component>
@@ -629,7 +626,7 @@
       <workItem from="1442781654421" duration="67000" />
       <workItem from="1442847218917" duration="16000" />
       <workItem from="1443351452350" duration="3336000" />
-      <workItem from="1443369305644" duration="4622000" />
+      <workItem from="1443369305644" duration="5143000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit. Fetches new version, downloads jar if newer available, saves new version if updated">
       <created>1438524565389</created>
@@ -691,11 +688,17 @@
       <option name="project" value="LOCAL" />
       <updated>1443369393690</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add UniqueFile class to differentiate files">
+      <created>1443375815252</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1443375815252</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28680000" />
+    <option name="totallyTimeSpent" value="29201000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -757,7 +760,8 @@
     <MESSAGE value="Add license" />
     <MESSAGE value="Minor corrections, remove launchLauncher method" />
     <MESSAGE value="Add test program that lists all files in a directory recursively with MD5 sums" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add test program that lists all files in a directory recursively with MD5 sums" />
+    <MESSAGE value="Add UniqueFile class to differentiate files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add UniqueFile class to differentiate files" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1146,7 +1150,7 @@
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1185,21 +1189,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/podcraft/ListFiles.java">
+    <entry file="file://$PROJECT_DIR$/src/com/podcraft/UniqueFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/podcraft/UniqueFile.java">
+    <entry file="file://$PROJECT_DIR$/src/com/podcraft/ListFiles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37880495">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="0.45095828">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
