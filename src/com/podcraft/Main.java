@@ -55,7 +55,6 @@ public class Main {
             System.out.println("Time to update to " + newest.name + " (build " + newest.code + "), current is " + current.name + "(build " + current.code + ")");
             update();
             updateCurrentJsonFile();
-            //launchLauncher();
         } else {
             System.out.println("Launcher is up-to-date with version " + current.name + " (build " + current.code + ")");
             System.exit(0);
@@ -124,32 +123,6 @@ public class Main {
             e.printStackTrace();
         }
         return result.toString();
-    }
-
-    private static void launchLauncher() {
-        Process proc;
-        String command = ".\\launch-no-update.bat";
-        try  {
-            System.out.println("Starting up new launcher");
-            proc = Runtime.getRuntime().exec(command);
-//            System.exit(0);
-            InputStream in = proc.getInputStream();
-            InputStream err = proc.getErrorStream();
-            BufferedReader inputStream = new BufferedReader(new InputStreamReader(in));
-            String s;
-            while((s = inputStream.readLine()) != null)
-            {
-                System.out.println(s);
-            }
-            BufferedReader errStream = new BufferedReader(new InputStreamReader(err));
-            String s2;
-            while((s2 = errStream.readLine()) != null)
-            {
-                System.err.println(s2);
-            }
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
     }
 
 }
