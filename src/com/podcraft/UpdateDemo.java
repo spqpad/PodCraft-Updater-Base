@@ -11,24 +11,25 @@ public class UpdateDemo {
 
     public static void main(String[] args) {
 
-        Set<UniqueFile> localFiles = ListFiles.listContents(new File("."));
-//        Set<UniqueFile> localFiles = new HashSet<>(100);
-//        localFiles.add(new UniqueFile(".\\a.txt", "d41d8cd98f00b204e9800998ecf8427e"));
-//        localFiles.add(new UniqueFile(".\\b.txt", "d41d8cd98f00b204e9800998ecf8427e"));
-
+        Set<UniqueFile> localFiles = ContentsSet.generate(new File("."));
 
         print(localFiles);
         System.out.println();
 
-        Set<UniqueFile> serverFiles = new HashSet<>(100);
-        serverFiles.add(new UniqueFile(".\\a.txt", "56b5c76820a22861686d38a95e51c4ce"));
-        serverFiles.add(new UniqueFile(".\\b.txt", "d41d8cd98f00b204e9800998ecf8427e"));
-        serverFiles.add(new UniqueFile(".\\e.txt", "3723ba491b0807da613b9e87c2d21f82"));
-        serverFiles.add(new UniqueFile(".\\f1\\a.txt", "c4c8bd3f5a0d686f2690aadfe5d04cf8"));
-        serverFiles.add(new UniqueFile(".\\f1\\g1\\a.txt", "6831353a7e34c825b891d95fc8810a0c"));
-        serverFiles.add(new UniqueFile(".\\f1\\g2\\xx.txt", "981e8cc039b33d06dc4916178f50c50d"));
-        serverFiles.add(new UniqueFile(".\\f2\\h1\\a.txt", "d41d8cd98f00b204e9800998ecf8427e"));
 
+        Set<UniqueFile> serverFiles = ContentsSet.readFromJson("{\n" +
+                " \n" +
+                "  \"files\":[\n" +
+                "    {\"qualifiedName\":\".\\\\a.txt\", \"md5\":\"56b5c76820a22861686d38a95e51c4ce\"}, \n" +
+                "    {\"qualifiedName\":\".\\\\b.txt\", \"md5\":\"d41d8cd98f00b204e9800998ecf8427e\"}, \n" +
+                "    {\"qualifiedName\":\".\\\\e.txt\", \"md5\":\"3723ba491b0807da613b9e87c2d21f82\"},\n" +
+                "    {\"qualifiedName\":\".\\\\f1\\\\a.txt\", \"md5\":\"c4c8bd3f5a0d686f2690aadfe5d04cf8\"},\n" +
+                "    {\"qualifiedName\":\".\\\\f1\\\\g1\\\\a.txt\", \"md5\":\"6831353a7e34c825b891d95fc8810a0c\"},\n" +
+                "    {\"qualifiedName\":\".\\\\f1\\\\g2\\\\xx.txt\", \"md5\":\"981e8cc039b33d06dc4916178f50c50d\"},\n" +
+                "    {\"qualifiedName\":\".\\\\f2\\\\h1\\\\a.txt\", \"md5\":\"d41d8cd98f00b204e9800998ecf8427e\"}\n" +
+                "  ]\n" +
+                "  \n" +
+                "}");
         print(serverFiles);
         System.out.println();
 
