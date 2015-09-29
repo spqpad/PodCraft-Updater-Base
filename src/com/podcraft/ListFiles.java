@@ -14,23 +14,57 @@ public class ListFiles {
     public static void main(String[] args) {
         Stopwatch stopwatch = new Stopwatch();
         File currentDir = new File("."); // current directory
-        displayDirectoryContents(currentDir);
+        System.out.println(generateJsonFileList(currentDir));
         System.out.println(stopwatch.elapsedTime());
     }
 
-    public static void displayDirectoryContents(File dir) {
+    public static void displayFileList(File dir) {
         File[] files = dir.listFiles();
         try {
             FileInputStream fis = null;
             for (File file : files) {
                 if (file.isDirectory()) {
                     //System.out.println("d " + file.getPath());
-                    displayDirectoryContents(file);
+                    displayFileList(file);
                 } else {
                     fis = new FileInputStream(file);
                     String md5 = org.apache.commons.codec.digest.DigestUtils.md5Hex(fis);
                     fis.close();
                     System.out.println("" + file.getPath() + " " + md5);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static String generateJsonFileList(File dir) {
+        boolean first = true;
+        StringBuilder json = new StringBuilder("{\n");
+        json.append("\"files\":\n[\n");
+        appendContentsList(dir, json, first);
+        json.append("]\n");
+        json.append("}");
+        return String.valueOf(json);
+    }
+
+    public static void appendContentsList(File dir, final StringBuilder jsonToAppend, boolean isFirstElement) {
+        File[] files = dir.listFiles();
+        try {
+            FileInputStream fis = null;
+            for (File file : files) {
+                if (file.isDirectory()) {
+                    appendContentsList(file, jsonToAppend, isFirstElement);
+                } else {
+                    fis = new FileInputStream(file);
+                    String md5 = org.apache.commons.codec.digest.DigestUtils.md5Hex(fis);
+                    fis.close();
+                    // {"qualifiedName":".\\a.txt", "md5":"56b5c76820a22861686d38a95e51c4ce"},
+                    if (!isFirstElement) {
+                        jsonToAppend.append(",\n");
+                    } else isFirstElement = false;
+                    jsonToAppend.append(String.format("{\"qualifiedName\":\"%s\", \"md5\":\"%s\"}", file.getPath(), md5));
+                    //System.out.println("" + file.getPath() + " " + md5);
                 }
             }
         } catch (IOException e) {
